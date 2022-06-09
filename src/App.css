@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+.todo {
+  margin-top: 100px;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pa-10 {
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.v-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.h-center {
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  padding: 8px;
+  font-size: 24px;
+  width: 420px;
+  border: 2px solid #c3c3c3;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 24px;
+  border: 2px solid #c3c3c3;
+  border-left: none;
+  cursor: pointer;
+}
+
+.todos-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todos-list ul li {
+  font-size: 18px;
+  padding: 8px;
+  margin-top: 12px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.todos-list ul li:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.todos-list ul li.has-done {
+  background-color: #98ffa6;
+}
+
+.todos-list ul li span.remove {
+  display: none;
+}
+
+.todos-list ul li span.text {
+  display: block;
+  user-select: none;
+}
+
+.todos-list ul li.has-done span.remove {
+  display: inline-block;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  font-size: 14px;
+  background: red;
+  padding: 4px 8px;
+  color: #e8e8e8;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.todos-list ul li.has-done span.remove:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.todos-list ul li.no-todos {
+  background-color: #fff7f7;
+  text-align: center;
+  color: #eae7e7;
+}
+
+.todos-list ul li.no-todos:hover {
+  box-shadow: none;
+  cursor: auto;
+  user-select: none;
 }
